@@ -10,13 +10,24 @@ from MvcForumApp import MvcForumApp
 
 
 class MvcForumTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        pass
+
     def setUp(self):
+        print(f'Test "{self._testMethodName}" is running...')
         self.url = 'http://localhost:8080/'
         self.my_tuple = ("One", "Two", "Three", "Four")
         self.browser = self.initialize_browser()
 
     def tearDown(self):
         self.browser.quit()
+        print(f'Test "{self._testMethodName}" finished.\n')
+
 
     def initialize_browser(self):
         chrome_options = chrome.options.Options()
@@ -57,5 +68,6 @@ class MvcForumTests(unittest.TestCase):
         self.assertEqual(user.username, username_from_menu,
                          f'Username "{username_from_menu}" should be "{user.username}"')
 
-    if __name__ == '__main__':
-        unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()
