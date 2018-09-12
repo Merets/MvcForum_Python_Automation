@@ -1,3 +1,4 @@
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -8,9 +9,21 @@ class ElementsContainer(object):
         self.container = container
         self.description = description
 
-    def wait_for_element(self, by, selector,  timeout=30, description=""):
-        element = WebDriverWait(self.container, timeout) \
-            .until(EC.presence_of_element_located((by, selector)))
+    def wait_for_element(self, by, selector, timeout=30, description=""):
+        element = WebDriverWait(self.container, timeout).until(EC.presence_of_element_located((by, selector)))
+        element.description = description
         return element
 
+    def wait_to_disappear(self, by, selector, appear_timeout=5, disappear_timeout=30):
+        try:
+            WebDriverWait(self.container, appear_timeout).until(EC.presence_of_element_located((by, selector)))
+            # self.wait_for_element(by, selector, appear_timeout).until(EC.presence_of_element_located((by, selector)))
+        except TimeoutException:
+            print("Warning: The Element is not present! No need to wait to disappear.")
+            return
 
+        try:
+            WebDriverWait(self.container, disappear_timeout).until_not(EC.presence_of_element_located((by, selector)))
+        except TimeoutException:
+            print("Timeout Exception")
+            raise

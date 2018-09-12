@@ -28,14 +28,16 @@ class MvcForumTests(unittest.TestCase):
         self.browser.quit()
         print(f'Test "{self._testMethodName}" finished.\n')
 
-
     def initialize_browser(self):
         chrome_options = chrome.options.Options()
 
         driver = webdriver.Chrome(options=chrome_options)
         driver.get(self.url)
+        driver.set_page_load_timeout(30)
+        driver.maximize_window()
 
         new_browser = Browser(driver, "Chrome")
+
         return new_browser
 
     def test_number1(self):

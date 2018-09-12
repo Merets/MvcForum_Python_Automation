@@ -14,6 +14,7 @@ class LogonPage(object):
         print(f'Value "{text_value}" inserted into "{element_id}" input field')
 
     def logon_submit(self):
-        logon_button = self.browser.wait_for_element(By.CSS_SELECTOR,"button[type='submit']", 10, "Logon Submit Button")
+        logon_button = self.browser.wait_for_element(By.CSS_SELECTOR, "button[type='submit']", 10,
+                                                     "Logon Submit Button")
         logon_button.click()
         print('Logon complete')

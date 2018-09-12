@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636a5537-6527-4161-a78f-ad57b2c83496" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MvcForumTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/MvcForumTests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObjects/LogonPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/LogonPage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,39 +58,39 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="4" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="4" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="11" />
           <entry key="dummy" value="7" />
-          <entry key="py" value="581" />
+          <entry key="py" value="1086" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="592" />
+          <entry key="Python" value="1097" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MvcForumTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+            <state relative-caret-position="703">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1536154290462" expanded="true" signature="412:431" ph="..." />
+                <marker date="1536742843634" expanded="true" signature="412:431" ph="..." />
               </folding>
             </state>
           </provider>
@@ -99,6 +104,88 @@
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1536049541861" expanded="true" signature="71:76" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/PycharmProjects/TestAutomation/venv/Lib/site-packages/selenium/webdriver/support/wait.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageObjects/LogonPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageObjects/MainPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#66#0" expanded="true" />
+                <marker date="1535978585873" expanded="true" signature="246:247" ph="..." />
+                <marker date="1535978585873" expanded="true" signature="246:251" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageObjects/NavigationBar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/Browser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <marker date="1536744518621" expanded="true" signature="240:241" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+                <marker date="1536741552263" expanded="true" signature="260:265" ph="..." />
+                <marker date="1536741552263" expanded="true" signature="260:340" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,22 +226,22 @@
         <option value="$PROJECT_DIR$/PageObjects/RegistrationForm.py" />
         <option value="$PROJECT_DIR$/PageObjects/LogonForm.py" />
         <option value="$PROJECT_DIR$/PageObjects/ElementsContainer.py" />
-        <option value="$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" />
         <option value="$PROJECT_DIR$/ElementsContainer.py" />
         <option value="$PROJECT_DIR$/BrowserElement.py" />
         <option value="$PROJECT_DIR$/Browser.py" />
         <option value="$PROJECT_DIR$/PageObjects/MainPage.py" />
-        <option value="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" />
         <option value="$PROJECT_DIR$/PageObjects/RegistrationPage.py" />
         <option value="$PROJECT_DIR$/PageObjects/NavigationBar.py" />
         <option value="$PROJECT_DIR$/MvcForumApp.py" />
-        <option value="$PROJECT_DIR$/PageObjects/LogonPage.py" />
-        <option value="$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" />
         <option value="$PROJECT_DIR$/Helpers/Generator.py" />
         <option value="$PROJECT_DIR$/ExaplesOfTests.py" />
         <option value="$PROJECT_DIR$/ExamplesOfTests.py" />
         <option value="$PROJECT_DIR$/MvcForumTests_old.py" />
+        <option value="$PROJECT_DIR$/PageObjects/LogonPage.py" />
+        <option value="$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" />
         <option value="$PROJECT_DIR$/MvcForumTests.py" />
+        <option value="$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" />
+        <option value="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" />
       </list>
     </option>
   </component>
@@ -210,7 +297,17 @@
             <path>
               <item name="MvcForum_Python_Automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="MvcForum_Python_Automation" type="462c0819:PsiDirectoryNode" />
+              <item name="AutomationInfrastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MvcForum_Python_Automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MvcForum_Python_Automation" type="462c0819:PsiDirectoryNode" />
               <item name="Helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MvcForum_Python_Automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MvcForum_Python_Automation" type="462c0819:PsiDirectoryNode" />
+              <item name="PageObjects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,9 +423,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.04 at 15h 34m 56s.xml">
-      <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.04 at 15h 37m 15s.xml">
       <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
     </history-entry>
@@ -356,6 +450,9 @@
     <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.05 at 16h 31m 58s.xml">
       <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.12 at 12h 31m 11s.xml">
+      <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -370,12 +467,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15201586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1526768" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41560283" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41560283" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26674366" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -480,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageObjects/MainPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -522,23 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageObjects/LogonPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PageObjects/NavigationBar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PageObjects/RegistrationPage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -546,35 +619,6 @@
           <folding>
             <marker date="1535980520784" expanded="true" signature="77:82" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-            <marker date="1535981354402" expanded="true" signature="204:209" ph="..." />
-            <marker date="1535981354402" expanded="true" signature="204:284" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/Browser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <marker date="1535980211303" expanded="true" signature="240:241" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -606,13 +650,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PageObjects/MainPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+            <marker date="1535978585873" expanded="true" signature="246:247" ph="..." />
+            <marker date="1535978585873" expanded="true" signature="246:251" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageObjects/NavigationBar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/TestAutomation/venv/Lib/site-packages/selenium/webdriver/support/wait.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageObjects/LogonPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/Browser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1536744518621" expanded="true" signature="240:241" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MvcForumTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        <state relative-caret-position="703">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1536154290462" expanded="true" signature="412:431" ph="..." />
+            <marker date="1536742843634" expanded="true" signature="412:431" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+            <marker date="1536741552263" expanded="true" signature="260:265" ph="..." />
+            <marker date="1536741552263" expanded="true" signature="260:340" ph="..." />
           </folding>
         </state>
       </provider>
