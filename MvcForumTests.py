@@ -69,6 +69,7 @@ class MvcForumTests(unittest.TestCase):
 
         self.assertEqual(user.username, username_from_menu,
                          f'Username "{username_from_menu}" should be "{user.username}"')
+        mvc_forum_app.take_screenshot("Username is shown in the Menu")
 
 
 if __name__ == '__main__':

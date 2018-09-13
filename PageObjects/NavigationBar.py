@@ -9,7 +9,7 @@ class NavigationBar(object):
 
     def open_my_tools_menu(self):
         my_tools_menu = self.browser.wait_for_element(By.CLASS_NAME, "mytoolslink", 10, "My Tools Menu Button")
-        my_tools_menu.click()
+        my_tools_menu.this_element.click()
 
     def get_text_from_edit_user_menu_item(self):
         menu_items_href = self.get_menu_items()

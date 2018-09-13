@@ -14,8 +14,9 @@ class MvcForumApp(object):
 
     def __open_registration_form(self):
         mvcforum_nav = self.browser.wait_for_element(By.ID, "mvcforum-nav", 10, "mvcforum-nav div element")
-        register_button = BrowserElement(mvcforum_nav).wait_for_element(By.LINK_TEXT, "Register", 10, "Register Button")
-        register_button.click()
+        register_button = mvcforum_nav.wait_for_element(By.LINK_TEXT, "Register", 10, "Register Button")
+        # register_button = BrowserElement(mvcforum_nav).wait_for_element(By.LINK_TEXT, "Register", 10, "Register Button")
+        register_button.this_element.click()
         registration_form = RegistrationPage(self.browser)
         return registration_form
 
@@ -44,7 +45,7 @@ class MvcForumApp(object):
     def __open_logon_form(self):
         logon_button = self.browser.wait_for_element(By.CSS_SELECTOR, "#mvcforum-nav a[href*='/logon/']", 10,
                                                      "Logon Button")
-        logon_button.click()
+        logon_button.this_element.click()
         logon_form = LogonPage(self.browser)
         return logon_form
 
@@ -53,3 +54,6 @@ class MvcForumApp(object):
         username_text = navbar.get_text_from_edit_user_menu_item()
         username_text = username_text.split()[1]
         return username_text
+
+    def take_screenshot(self, description):
+        self.browser.take_screenshot(description)
