@@ -8,8 +8,10 @@ class Generator(object):
         pass
 
     @classmethod
-    def get_random_number(cls):
-        number = random.randint(100000, 999999)
+    def get_random_number(cls, num_of_digits=6):
+        start_num = 10 ** (num_of_digits - 1)
+        end_num = (10 ** num_of_digits) - 1
+        number = random.randint(start_num, end_num)
         return number
 
     @classmethod
@@ -19,4 +21,5 @@ class Generator(object):
         password = random_number
         email = username + '@gmail.com'
         new_user = User(username, password, email)
+        print(f'New User is generated: {new_user}')
         return new_user

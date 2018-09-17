@@ -71,6 +71,28 @@ class MvcForumTests(unittest.TestCase):
                          f'Username "{username_from_menu}" should be "{user.username}"')
         mvc_forum_app.take_screenshot("Username is shown in the Menu")
 
+    def test_user_can_see_post_that_other_user_posted(self):
+        user1 = Generator.generate_user()
+        user2 = Generator.generate_user()
+
+        mvc_forum_app = MvcForumApp(self.browser)
+
+        mvc_forum_app.register_new_user(user1)
+        mvc_forum_app.logoff()
+        mvc_forum_app.register_new_user(user2)
+        mvc_forum_app.logoff()
+
+        mvc_forum_app.logon(user1)
+
+        magic_number1 = Generator.get_random_number(10)
+        post1 = f'This is a new Post, and this is the Magic Number: {magic_number1}'
+        mvc_forum_app.create_new_post(post1)
+        mvc_forum_app.logoff()
+
+        mvc_forum_app.logon(user2)
+        is_magic_number1_appeared_on_page = mvc_forum_app.search_for_string_on_posts_page(str(magic_number1))
+        assert is_magic_number1_appeared_on_page
+
 
 if __name__ == '__main__':
     unittest.main()
