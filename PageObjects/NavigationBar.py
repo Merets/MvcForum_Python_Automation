@@ -9,7 +9,7 @@ class NavigationBar(object):
 
     def __open_my_tools_menu(self):
         my_tools_menu = self.browser.wait_for_element(By.CLASS_NAME, "mytoolslink", "My Tools Menu Button", 10)
-        my_tools_menu.this_element.click()
+        my_tools_menu.click()
 
     def get_text_from_edit_user_menu_item(self):
         menu_items_href = self.__get_menu_items()
@@ -18,7 +18,7 @@ class NavigationBar(object):
 
     def __get_menu_items(self):
         self.__open_my_tools_menu()
-        menu_items_href = self.browser.container.find_elements_by_css_selector("#mvcforum-nav > ul > li > ul > li > a")
+        menu_items_href = self.browser.driver.find_elements_by_css_selector("#mvcforum-nav > ul > li > ul > li > a")
         return menu_items_href
 
     def logoff(self):

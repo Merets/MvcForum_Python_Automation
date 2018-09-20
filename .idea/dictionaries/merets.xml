@@ -2,6 +2,7 @@
   <dictionary name="merets">
     <words>
       <w>chromedriver</w>
+      <w>screenshot</w>
     </words>
   </dictionary>
 </component>

@@ -3,6 +3,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver import chrome
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 from AutomationInfrastructure.Browser import Browser
 from Helpers.Generator import Generator
@@ -40,26 +41,8 @@ class MvcForumTests(unittest.TestCase):
 
         return new_browser
 
-    def test_number1(self):
-        self.assertEqual("One", self.my_tuple[0], "Check if self.widget[0] == 'One'")
-
-    def test_number2(self):
-        self.assertEqual("Two", self.my_tuple[1], "Check if self.widget[1] == 'Two'")
-
-    @unittest.skip("demonstrating skipping")
-    def test_number3(self):
-        self.assertEqual("Three", self.my_tuple[2], "Check if self.widget[2] == 'Three'")
-
-    def test_number4(self):
-        self.assertEqual("Four", self.my_tuple[3], "Check if self.widget[3] == 'Four'")
-
-    @unittest.skip("demonstrating skipping")
-    def test_nothing(self):
-        self.fail("shouldn't happen")
-
     def test_user_can_see_his_username_after_registration_logoff_and_login_again(self):
         user = Generator.generate_user()
-        print(user)
 
         mvc_forum_app = MvcForumApp(self.browser)
         mvc_forum_app.register_new_user(user)
@@ -69,7 +52,8 @@ class MvcForumTests(unittest.TestCase):
 
         self.assertEqual(user.username, username_from_menu,
                          f'Username "{username_from_menu}" should be "{user.username}"')
-        mvc_forum_app.take_screenshot("Username is shown in the Menu")
+        print("Username is displayed after Login.")
+        mvc_forum_app.take_screenshot("Username is shown in the Menu")  # TODO: Make Screenshot save file
 
     def test_user_can_see_post_that_other_user_posted(self):
         user1 = Generator.generate_user()
@@ -91,6 +75,8 @@ class MvcForumTests(unittest.TestCase):
 
         mvc_forum_app.logon(user2)
         is_magic_number1_appeared_on_page = mvc_forum_app.search_for_string_on_posts_page(str(magic_number1))
+        if is_magic_number1_appeared_on_page:
+            mvc_forum_app.move_to_bottom_of_page()
         assert is_magic_number1_appeared_on_page
 
 

@@ -13,8 +13,8 @@ class MvcForumApp(object):
 
     def __open_registration_form(self):
         mvcforum_nav = self.browser.wait_for_element(By.ID, "mvcforum-nav", "mvcforum-nav div element", 10)
-        register_button = mvcforum_nav.wait_for_element(By.LINK_TEXT, "Register", "Register Button", 10)
-        register_button.this_element.click()
+        register_button = mvcforum_nav.wait_for_child_element(By.LINK_TEXT, "Register", "Register Button", 10)
+        register_button.click()
         registration_form = RegistrationPage(self.browser)
         return registration_form
 
@@ -46,7 +46,7 @@ class MvcForumApp(object):
     def __open_logon_form(self):
         logon_button = self.browser.wait_for_element(By.CSS_SELECTOR, "#mvcforum-nav a[href*='/logon/']",
                                                      "Logon Button", 10)
-        logon_button.this_element.click()
+        logon_button.click()
         logon_form = LogonPage(self.browser)
         return logon_form
 
@@ -67,7 +67,7 @@ class MvcForumApp(object):
 
     def __open_posts_page(self):
         readme_button = self.browser.wait_for_element(By.CLASS_NAME, 'glyphicon-exclamation-sign', "Read Me Button")
-        readme_button.this_element.click()
+        readme_button.click()
 
         posts_page = PostsPage(self.browser)
         return posts_page
@@ -79,3 +79,6 @@ class MvcForumApp(object):
         if is_string_on_page:
             print("String found.")
         return is_string_on_page
+
+    def move_to_bottom_of_page(self):
+        self.browser.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")

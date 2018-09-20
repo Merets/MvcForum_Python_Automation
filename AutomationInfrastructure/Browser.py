@@ -1,31 +1,41 @@
-from selenium.webdriver import ActionChains
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from AutomationInfrastructure.ElementsContainer import ElementsContainer
+from AutomationInfrastructure.WebElementExtensions import WebElementExtensions
 
 
-class Browser(ElementsContainer):
+class Browser(object):
 
     def __init__(self, driver, browser_name):
-        ElementsContainer.__init__(self, container=driver, description=browser_name)
-        self.container = driver
-        self.locator_type = None
-        self.locator = None
+        self.driver = driver
+        self.browser_name = browser_name
+        self.initialize_web_element_class()
+
+    def wait_for_element(self, by, selector, description="", timeout=30):
+        element = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((by, selector)))
+        element.by = by
+        element.selector = selector
+        element.description = description
+        return element
 
     def quit(self):
-        self.container.quit()
+        self.driver.quit()
 
     def take_screenshot(self, description):
         description.replace(" ", "")
-        self.container.save_screenshot('/Screenshots/' + description + '.png')
-
-    def move_to_element(self, element):
-        ActionChains(self.container).move_to_element(element.this_element).perform()
+        self.driver.save_screenshot('/Screenshots/' + description + '.png')
 
     def switch_to_iframe(self, iframe_id):
-        WebDriverWait(self.container, 10).until(EC.frame_to_be_available_and_switch_to_it(iframe_id))
+        WebDriverWait(self.driver, 10).until(EC.frame_to_be_available_and_switch_to_it(iframe_id))
 
     def switch_back_to_main(self):
-        self.container.switch_to.default_content()
+        self.driver.switch_to.default_content()
 
+    def initialize_web_element_class(self):
+        WebElement.web_driver = self.driver
+        WebElement.by = ""
+        WebElement.selector = ""
+        WebElement.wait_for_child_element = WebElementExtensions.wait_for_child_element
+        WebElement.move_to_element = WebElementExtensions.move_to_element
+        WebElement.wait_to_disappear = WebElementExtensions.wait_to_disappear
