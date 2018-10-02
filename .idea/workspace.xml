@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636a5537-6527-4161-a78f-ad57b2c83496" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/merets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/merets.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MvcForumApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/MvcForumApp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MvcForumTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/MvcForumTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/LogonPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/LogonPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/NavigationBar.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/NavigationBar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PageObjects/PostsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/PostsPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/RegistrationPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/RegistrationPage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,18 +52,19 @@
         <counts>
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="57" />
+          <entry key="py" value="62" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="57" />
+          <entry key="Python" value="62" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
@@ -78,82 +72,39 @@
         <counts>
           <entry key="Python Console" value="1215" />
           <entry key="dummy" value="8" />
-          <entry key="py" value="5928" />
+          <entry key="py" value="6517" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="7143" />
+          <entry key="Python" value="7732" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MvcForumTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="214">
+              <caret line="76" column="63" lean-forward="true" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1537452942367" expanded="true" signature="456:475" ph="..." />
-                <marker date="1537452942367" expanded="true" signature="1141:1145" ph="..." />
-                <marker date="1537452942367" expanded="true" signature="1809:1813" ph="..." />
+                <marker date="1538467161838" expanded="true" signature="456:475" ph="..." />
+                <marker date="1538467161838" expanded="true" signature="1141:1145" ph="..." />
+                <marker date="1538467161838" expanded="true" signature="1809:1813" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python/Python37-32/Lib/unittest/case.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="662" selection-start-line="662" selection-end-line="662" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python/Python37-32/Lib/unittest/suite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PageObjects/RegistrationPage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <marker date="1537432266661" expanded="true" signature="77:82" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PageObjects/PostsPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1537447952382" expanded="true" signature="83:88" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PageObjects/NavigationBar.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="296">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -164,11 +115,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MvcForumApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="52">
+              <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-                <marker date="1537451560043" expanded="true" signature="312:317" ph="..." />
+                <marker date="1538483933419" expanded="true" signature="312:317" ph="..." />
               </folding>
             </state>
           </provider>
@@ -177,7 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/Browser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="171">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -189,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/WebElementExtensions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
                 <marker date="1537450343334" expanded="true" signature="260:261" ph="..." />
@@ -201,7 +153,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/PycharmProjects/TestAutomation/venv/Lib/site-packages/selenium/webdriver/common/action_chains.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="1083">
               <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
             </state>
           </provider>
@@ -228,6 +180,7 @@
       <find>this_element</find>
       <find>move_to_element</find>
       <find>wait_for_child_element</find>
+      <find>Searching for string</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -257,18 +210,18 @@
         <option value="$PROJECT_DIR$/MvcForumTests_old.py" />
         <option value="$PROJECT_DIR$/Helpers/Generator.py" />
         <option value="$PROJECT_DIR$/PageObjects/MainPage.py" />
-        <option value="$PROJECT_DIR$/AutomationInfrastructure/TimeConversions.py" />
         <option value="$PROJECT_DIR$/PageObjects/LogonPage.py" />
         <option value="$PROJECT_DIR$/PageObjects/RegistrationPage.py" />
         <option value="$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" />
         <option value="$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" />
         <option value="$PROJECT_DIR$/PageObjects/NavigationBar.py" />
-        <option value="$PROJECT_DIR$/PageObjects/PostsPage.py" />
         <option value="$PROJECT_DIR$/AutomationInfrastructure/WebElementExtension.py" />
         <option value="$PROJECT_DIR$/AutomationInfrastructure/WebElementExtensions.py" />
         <option value="$PROJECT_DIR$/AutomationInfrastructure/Browser.py" />
-        <option value="$PROJECT_DIR$/MvcForumApp.py" />
+        <option value="$PROJECT_DIR$/AutomationInfrastructure/TimeConversions.py" />
         <option value="$PROJECT_DIR$/MvcForumTests.py" />
+        <option value="$PROJECT_DIR$/MvcForumApp.py" />
+        <option value="$PROJECT_DIR$/PageObjects/PostsPage.py" />
       </list>
     </option>
   </component>
@@ -343,8 +296,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/merets/Documents/MvcForum_Python_Automation/PageObjects/PostsPage.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -366,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in MvcForumTests.py">
+  <component name="RunManager" selected="Python tests.Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted">
     <configuration name="Unittests for MvcForumTests.MvcForumTests.test_demo_of_move_to_element" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="TestAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -446,8 +400,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in MvcForumTests.py" />
         <item itemvalue="Python tests.Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" />
+        <item itemvalue="Python tests.Unittests in MvcForumTests.py" />
         <item itemvalue="Python tests.Unittests for MvcForumTests.MvcForumTests.test_user_can_see_his_username_after_registration_logoff_and_login_again" />
         <item itemvalue="Python tests.Unittests for MvcForumTests.MvcForumTests.test_demo_of_move_to_element" />
         <item itemvalue="Python tests.Unittests for MvcForumTests.MvcForumTests.test_merets" />
@@ -471,34 +425,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_demo_of_move_to_element - 2018.09.20 at 15h 34m 57s.xml">
-      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_demo_of_move_to_element" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_demo_of_move_to_element - 2018.09.20 at 15h 35m 54s.xml">
-      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_demo_of_move_to_element" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_his_username_after_registration_logoff_and_login_again - 2018.09.20 at 15h 39m 47s.xml">
-      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_his_username_after_registration_logoff_and_login_again" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_his_username_after_registration_logoff_and_login_again - 2018.09.20 at 15h 41m 24s.xml">
-      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_his_username_after_registration_logoff_and_login_again" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.20 at 15h 43m 39s.xml">
-      <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.20 at 15h 51m 17s.xml">
-      <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.20 at 15h 52m 12s.xml">
-      <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.09.20 at 15h 52m 47s.xml">
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 11h 44m 28s.xml">
       <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_MvcForumTests_py - 2018.09.20 at 16h 00m 19s.xml">
-      <configuration name="Unittests in MvcForumTests.py" configurationId="tests" />
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 11h 50m 44s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.09.20 at 17h 05m 56s.xml">
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 11h 59m 51s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 15h 39m 57s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 16h 08m 20s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 16h 09m 03s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 16h 10m 09s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 16h 10m 45s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 16h 17m 37s.xml">
+      <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_MvcForumTests_MvcForumTests_test_user_can_see_post_that_other_user_posted - 2018.10.02 at 16h 21m 03s.xml">
       <configuration name="Unittests for MvcForumTests.MvcForumTests.test_user_can_see_post_that_other_user_posted" configurationId="tests" />
     </history-entry>
   </component>
@@ -515,13 +469,13 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.51861703" visible="true" weight="0.1526768" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.51861703" visible="true" weight="0.1526768" />
       <window_info id="Structure" order="1" sideWeight="0.48138297" side_tool="true" weight="0.1526768" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46666667" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.25815603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46666667" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39432624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -553,8 +507,38 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/PageObjects/PostsPage.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="22" />
+          <line>31</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PageObjects/PostsPage.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PageObjects/PostsPage.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PageObjects/PostsPage.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PageObjects/PostsPage.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PageObjects/PostsPage.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MvcForumApp.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -710,31 +694,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-          <folding>
-            <marker date="1535879608390" expanded="true" signature="19:24" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PageObjects/MainPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1537188853283" expanded="true" signature="23:24" ph="..." />
-            <marker date="1537188853283" expanded="true" signature="23:28" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/TimeConversions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <marker date="1537188969859" expanded="true" signature="48:53" ph="..." />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/PycharmProjects/TestAutomation/venv/Lib/site-packages/selenium/webdriver/support/wait.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -768,9 +732,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py" />
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py" />
     <entry file="file://$PROJECT_DIR$/PageObjects/RegistrationPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="399">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <marker date="1537432266661" expanded="true" signature="77:82" ph="..." />
@@ -778,33 +744,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python37-32/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="662" selection-start-line="662" selection-end-line="662" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python37-32/Lib/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/BrowserElement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PageObjects/NavigationBar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="342">
           <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -812,38 +754,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageObjects/PostsPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1537447952382" expanded="true" signature="83:88" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/ElementsContainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/PycharmProjects/TestAutomation/venv/Lib/site-packages/selenium/webdriver/common/action_chains.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
+        <state relative-caret-position="1083">
           <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Python37-32/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python/Python37-32/Lib/unittest/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/TimeConversions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <marker date="1537188969859" expanded="true" signature="48:53" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/Browser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/WebElementExtensions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
             <marker date="1537450343334" expanded="true" signature="260:261" ph="..." />
@@ -851,35 +806,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutomationInfrastructure/Browser.py">
+    <entry file="file://C:/Python/Python37-32/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="63">
+          <caret line="606" column="8" selection-start-line="606" selection-start-column="8" selection-end-line="606" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MvcForumTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="76" column="63" lean-forward="true" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1538467161838" expanded="true" signature="456:475" ph="..." />
+            <marker date="1538467161838" expanded="true" signature="1141:1145" ph="..." />
+            <marker date="1538467161838" expanded="true" signature="1809:1813" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MvcForumApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+        <state relative-caret-position="52">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <marker date="1537451560043" expanded="true" signature="312:317" ph="..." />
+            <marker date="1538483933419" expanded="true" signature="312:317" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MvcForumTests.py">
+    <entry file="file://$PROJECT_DIR$/PageObjects/PostsPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="296">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1537452942367" expanded="true" signature="456:475" ph="..." />
-            <marker date="1537452942367" expanded="true" signature="1141:1145" ph="..." />
-            <marker date="1537452942367" expanded="true" signature="1809:1813" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

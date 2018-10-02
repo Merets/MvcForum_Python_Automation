@@ -77,6 +77,7 @@ class MvcForumTests(unittest.TestCase):
         is_magic_number1_appeared_on_page = mvc_forum_app.search_for_string_on_posts_page(str(magic_number1))
         if is_magic_number1_appeared_on_page:
             mvc_forum_app.move_to_bottom_of_page()
+
         assert is_magic_number1_appeared_on_page
 
 

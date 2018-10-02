@@ -75,9 +75,13 @@ class MvcForumApp(object):
     def search_for_string_on_posts_page(self, string_to_search):
         print(f'Searching for string: "{string_to_search}"...')
         posts_page = self.__open_posts_page()
-        is_string_on_page = posts_page.is_string_on_posts_page(string_to_search)
+
+        is_string_on_page = posts_page.search_for_string(string_to_search)
+
         if is_string_on_page:
             print("String found.")
+        else:
+            print(f"Warning: String '{string_to_search}' was not found!")
         return is_string_on_page
 
     def move_to_bottom_of_page(self):
