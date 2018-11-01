@@ -42,7 +42,7 @@ class PostsPage(object):
     def __get_more_posts_link_element(self):
         return self.browser.driver.find_element(By.CLASS_NAME, "showmoreposts")
 
-    def search_for_string(self, string_to_search):
+    def is_string_on_page(self, string_to_search):  # TODO: rename to is_string_on_page()
         while True:
             is_string_on_page = self.__is_string_on_posts_page(string_to_search)
             is_show_more_posts_visible = self.__is_show_more_posts_visible()
@@ -52,3 +52,29 @@ class PostsPage(object):
             else:
                 self.__show_more_posts()
         return is_string_on_page
+
+    def like_the_post(self, user, expected_post_text):
+        if self.is_string_on_page(expected_post_text):
+            list_of_user_posts = self.__get_all_user_posts(user)
+            for post in list_of_user_posts:
+                postcontent = post.wait_for_child_element(By.CLASS_NAME, "postcontent", "postcontent")
+                p_elements = postcontent.find_elements(By.TAG_NAME, "p")
+                text_p = p_elements[1].text
+                if expected_post_text in text_p:
+                    votelink_elements = post.find_elements(By.CLASS_NAME, "votelink")
+                    # TODO: fix the issue where the Like is available on the web page
+                    for vote_link in votelink_elements:
+                        if vote_link.get_attribute("data-votetype") == "up":
+                            assert vote_link.get_attribute("data-hasvoted") == "false"
+                            vote_link.click()
+
+    def __get_all_user_posts(self, user):
+        self.browser.wait_for_element(By.CLASS_NAME, "topicshow", "Main div of all posts")
+        all_posts = self.browser.driver.find_elements(By.CLASS_NAME, "post")
+        posts_from_user = []
+        for post in all_posts:
+            postbodytop = post.wait_for_child_element(By.CLASS_NAME, "postbodytop", "post body top")
+            username_of_post = postbodytop.wait_for_child_element(By.TAG_NAME, "a", "post username link")
+            if username_of_post.text == user.username:
+                posts_from_user.append(post)
+        return posts_from_user

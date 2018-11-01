@@ -8,9 +8,9 @@ class Generator(object):
         pass
 
     @classmethod
-    def get_random_number(cls, num_of_digits=6):
-        start_num = 10 ** (num_of_digits - 1)
-        end_num = (10 ** num_of_digits) - 1
+    def get_random_number(cls, amount_of_digits=6):
+        start_num = 10 ** (amount_of_digits - 1)
+        end_num = (10 ** amount_of_digits) - 1
         number = random.randint(start_num, end_num)
         return number
 

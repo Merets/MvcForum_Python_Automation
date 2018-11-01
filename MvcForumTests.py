@@ -3,14 +3,17 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver import chrome
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 
 from AutomationInfrastructure.Browser import Browser
+from Helpers.Discussion import Discussion
 from Helpers.Generator import Generator
+from Helpers.HelperEnums import DiscussionCategory
 from MvcForumApp import MvcForumApp
 
 
 class MvcForumTests(unittest.TestCase):
+
+    # <editor-fold desc="TestInitialization">
     @classmethod
     def setUpClass(cls):
         pass
@@ -24,6 +27,7 @@ class MvcForumTests(unittest.TestCase):
         self.url = 'http://localhost:8080/'
         self.my_tuple = ("One", "Two", "Three", "Four")
         self.browser = self.initialize_browser()
+        self.mvc_forum_app = MvcForumApp(self.browser)
 
     def tearDown(self):
         self.browser.quit()
@@ -40,45 +44,96 @@ class MvcForumTests(unittest.TestCase):
         new_browser = Browser(driver, "Chrome")
 
         return new_browser
+    # </editor-fold>
 
+    # <editor-fold desc="TestUtilities">
+    def __register_new_users(self, amount_of_users):
+        if not isinstance(amount_of_users, int) \
+                or not amount_of_users > 0:
+            raise ValueError("Amount of Users should be a number greater than 0")
+
+        users_list = []
+        for i in range(amount_of_users):
+            user = Generator.generate_user()
+            is_registration_done = self.mvc_forum_app.register_new_user(user)
+            if is_registration_done:
+                users_list.append(user)
+                self.mvc_forum_app.logoff()
+            else:
+                raise Exception(f"User '{user.username}' registration failed!")
+        return users_list
+
+    def __create_discussion(self, category):
+        magic_number = Generator.get_random_number(10)
+        discussion_title = f"Discussion {magic_number}"
+        tag = f"Tag - {category.name}"
+        discussion_content = f'This is a new Discussion, with the Magic Number: {magic_number}'
+        discussion = Discussion(discussion_title, category, tag, discussion_content)
+        self.mvc_forum_app.create_new_discussion(discussion)
+        return discussion
+
+    def __is_discussion_on_main_page(self, discussion):
+        main_page = self.mvc_forum_app.open_main_page()
+        return main_page.is_discussion_present(discussion)
+
+    def __take_screenshot(self, description):
+        self.browser.take_screenshot(description)
+
+    # </editor-fold>
+
+    # <editor-fold desc="Tests">
     def test_user_can_see_his_username_after_registration_logoff_and_login_again(self):
-        user = Generator.generate_user()
+        app = self.mvc_forum_app
+        users_list = self.__register_new_users(1)
+        user = users_list[0]
 
-        mvc_forum_app = MvcForumApp(self.browser)
-        mvc_forum_app.register_new_user(user)
-        mvc_forum_app.logoff()
-        mvc_forum_app.logon(user)
-        username_from_menu = mvc_forum_app.get_username_from_menu()
+        app.logon(user)
 
+        username_from_menu = app.get_username_from_menu()
+
+        self.__take_screenshot("Username is shown in the Menu")  # TODO: Make Screenshot save file
         self.assertEqual(user.username, username_from_menu,
                          f'Username "{username_from_menu}" should be "{user.username}"')
-        print("Username is displayed after Login.")
-        mvc_forum_app.take_screenshot("Username is shown in the Menu")  # TODO: Make Screenshot save file
 
-    def test_user_can_see_post_that_other_user_posted(self):
-        user1 = Generator.generate_user()
-        user2 = Generator.generate_user()
+    def test_user_can_see_discussion_that_other_user_posted(self):
+        app = self.mvc_forum_app
+        users_list = self.__register_new_users(2)
+        user1 = users_list[0]
+        user2 = users_list[1]
 
-        mvc_forum_app = MvcForumApp(self.browser)
+        app.logon(user1)
+        category = DiscussionCategory.Python
+        discussion = self.__create_discussion(category)
+        app.logoff()
 
-        mvc_forum_app.register_new_user(user1)
-        mvc_forum_app.logoff()
-        mvc_forum_app.register_new_user(user2)
-        mvc_forum_app.logoff()
+        app.logon(user2)
+        is_discussion_on_main_page = self.__is_discussion_on_main_page(discussion)
 
-        mvc_forum_app.logon(user1)
+        assert is_discussion_on_main_page
 
-        magic_number1 = Generator.get_random_number(10)
-        post1 = f'This is a new Post, and this is the Magic Number: {magic_number1}'
-        mvc_forum_app.create_new_post(post1)
-        mvc_forum_app.logoff()
+    def test_user_can_see_vote_up_badge_of_other_user_after_voting_up(self):
+        app = self.mvc_forum_app
+        users_list = self.__register_new_users(2)
+        user1 = users_list[0]
+        user2 = users_list[1]
 
-        mvc_forum_app.logon(user2)
-        is_magic_number1_appeared_on_page = mvc_forum_app.search_for_string_on_posts_page(str(magic_number1))
-        if is_magic_number1_appeared_on_page:
-            mvc_forum_app.move_to_bottom_of_page()
+        app.logon(user1)
+        category = DiscussionCategory.ExampleCategory
+        self.__create_discussion(category)
+        app.logoff()
 
-        assert is_magic_number1_appeared_on_page
+        app.logon(user2)
+        category = DiscussionCategory.Python
+        discussion2 = self.__create_discussion(category)
+        app.logoff()
+
+        app.logon(user1)
+        discussion_page = app.enter_to_discussion(discussion2)
+        discussion_page.like_the_discussion()
+        is_first_vote_up_badge = app.is_first_vote_up_badge_appeared_on_activity_tab(user2)
+
+        assert is_first_vote_up_badge
+    # </editor-fold>
 
 
 if __name__ == '__main__':

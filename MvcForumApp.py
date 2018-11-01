@@ -1,8 +1,10 @@
 from selenium.webdriver.common.by import By
+
+from PageObjects.ActivityPage import ActivityPage
+from PageObjects.CreateDiscussionPage import CreateDiscussionPage
 from PageObjects.LogonPage import LogonPage
 from PageObjects.MainPage import MainPage
 from PageObjects.NavigationBar import NavigationBar
-from PageObjects.PostsPage import PostsPage
 from PageObjects.RegistrationPage import RegistrationPage
 
 
@@ -10,13 +12,24 @@ class MvcForumApp(object):
     def __init__(self, browser):
         self.browser = browser
         self.main_page = MainPage(browser=browser)
+        self.user1 = None
+        self.user2 = None
+        self.magic_number1 = None
+        self.discussion_title = None
 
     def __open_registration_form(self):
+        print(f'Opening Registration Form...')
         mvcforum_nav = self.browser.wait_for_element(By.ID, "mvcforum-nav", "mvcforum-nav div element", 10)
         register_button = mvcforum_nav.wait_for_child_element(By.LINK_TEXT, "Register", "Register Button", 10)
         register_button.click()
-        registration_form = RegistrationPage(self.browser)
-        return registration_form
+        return RegistrationPage(self.browser)
+
+    def __open_activity_tab(self):
+        print(f'Opening Activity Tab...')
+        content_strip = self.browser.wait_for_element(By.CLASS_NAME, "content-strip", "content-strip Main Menu")
+        activity_link = content_strip.wait_for_child_element(By.LINK_TEXT, "Activity", "Activity link")
+        activity_link.click()
+        return ActivityPage(self.browser)
 
     def register_new_user(self, user):
         print(f'Registering new User: "{user.username}"...')
@@ -28,6 +41,7 @@ class MvcForumApp(object):
         registration_form.fill_input_text(registration_form.element_id_email, user.email)
 
         registration_form.register_submit()
+        return True
 
     def logoff(self):
         print(f'Logging off...')
@@ -47,8 +61,7 @@ class MvcForumApp(object):
         logon_button = self.browser.wait_for_element(By.CSS_SELECTOR, "#mvcforum-nav a[href*='/logon/']",
                                                      "Logon Button", 10)
         logon_button.click()
-        logon_form = LogonPage(self.browser)
-        return logon_form
+        return LogonPage(self.browser)
 
     def get_username_from_menu(self):
         navbar = NavigationBar(self.browser)
@@ -56,33 +69,29 @@ class MvcForumApp(object):
         username_text = username_text.split()[1]
         return username_text
 
-    def take_screenshot(self, description):
-        self.browser.take_screenshot(description)
+    def __open_new_discussion_page(self):
+        create_discussion_button = self.browser.wait_for_element(By.CLASS_NAME, "createtopicbutton",
+                                                                 "Create New Post Button")
+        create_discussion_button.click()
+        return CreateDiscussionPage(self.browser)
 
-    def create_new_post(self, post_string):
-        print(f'Creating new post...')
-        posts_page = self.__open_posts_page()
-        posts_page.write_post(post_string)
-        posts_page.add_post()
+    def create_new_discussion(self, discussion):
+        print(f'Creating new discussion...')
+        create_discussion_page = self.__open_new_discussion_page()
+        create_discussion_page.create_new_discussion(discussion)
 
-    def __open_posts_page(self):
-        readme_button = self.browser.wait_for_element(By.CLASS_NAME, 'glyphicon-exclamation-sign', "Read Me Button")
-        readme_button.click()
+    def is_first_vote_up_badge_appeared_on_activity_tab(self, user):
+        activity_tab = self.__open_activity_tab()
+        is_badge_on_page = activity_tab.search_for_first_vote_up_badge(user)
+        return is_badge_on_page
 
-        posts_page = PostsPage(self.browser)
-        return posts_page
+    def open_main_page(self):
+        navbar = self.browser.wait_for_element(By.CLASS_NAME, "navbar-brand", "NavBar Main Button")
+        navbar.click()
+        return MainPage(self.browser)
 
-    def search_for_string_on_posts_page(self, string_to_search):
-        print(f'Searching for string: "{string_to_search}"...')
-        posts_page = self.__open_posts_page()
-
-        is_string_on_page = posts_page.search_for_string(string_to_search)
-
-        if is_string_on_page:
-            print("String found.")
-        else:
-            print(f"Warning: String '{string_to_search}' was not found!")
-        return is_string_on_page
-
-    def move_to_bottom_of_page(self):
-        self.browser.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    def enter_to_discussion(self, discussion):
+        print(f'Entering to discussion...')
+        main_page = self.open_main_page()
+        discussion_page = main_page.enter_to_discussion(discussion)
+        return discussion_page
