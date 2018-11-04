@@ -5,10 +5,12 @@ from selenium.webdriver import chrome
 from selenium.webdriver.chrome.options import Options
 
 from AutomationInfrastructure.Browser import Browser
+from Helpers.Comment import Comment
 from Helpers.Discussion import Discussion
 from Helpers.Generator import Generator
 from Helpers.HelperEnums import DiscussionCategory
 from MvcForumApp import MvcForumApp
+from PageObjects.DiscussionPage import DiscussionPage
 
 
 class MvcForumTests(unittest.TestCase):
@@ -44,6 +46,7 @@ class MvcForumTests(unittest.TestCase):
         new_browser = Browser(driver, "Chrome")
 
         return new_browser
+
     # </editor-fold>
 
     # <editor-fold desc="TestUtilities">
@@ -79,7 +82,23 @@ class MvcForumTests(unittest.TestCase):
     def __take_screenshot(self, description):
         self.browser.take_screenshot(description)
 
-    # </editor-fold>
+    def __create_comment_for_discussion(self, discussion):
+        discussion_page = self.mvc_forum_app.enter_to_discussion(discussion)
+        magic_number = Generator.get_random_number(7)
+        comment = Comment(f"This is a comment with Magic Number '{magic_number}' to discussion '{discussion.title}'")
+        discussion_page.write_comment(comment)
+        discussion_page.add_comment()
+        return comment
+
+    def __is_comment_on_discussion_page(self, comment, discussion_page):
+        if not isinstance(comment, Comment):
+            raise TypeError("Comment should be valid!")
+        if not isinstance(discussion_page, DiscussionPage):
+            raise TypeError("Discussion Page should be valid!")
+
+        return discussion_page.is_comment_displayed(comment)
+
+        # </editor-fold>
 
     # <editor-fold desc="Tests">
     def test_user_can_see_his_username_after_registration_logoff_and_login_again(self):
@@ -133,6 +152,28 @@ class MvcForumTests(unittest.TestCase):
         is_first_vote_up_badge = app.is_first_vote_up_badge_appeared_on_activity_tab(user2)
 
         assert is_first_vote_up_badge
+
+    def test_user_can_see_comment_that_other_user_posted(self):
+        app = self.mvc_forum_app
+        users_list = self.__register_new_users(2)
+        user1 = users_list[0]
+        user2 = users_list[1]
+
+        app.logon(user1)
+        category = DiscussionCategory.Java
+        discussion = self.__create_discussion(category)
+        app.logoff()
+
+        app.logon(user2)
+        comment = self.__create_comment_for_discussion(discussion)
+        app.logoff()
+
+        app.logon(user1)
+        discussion_page = app.enter_to_discussion(discussion)
+
+        is_comment_on_discussion_page = self.__is_comment_on_discussion_page(comment, discussion_page)
+        assert is_comment_on_discussion_page
+
     # </editor-fold>
 
 
