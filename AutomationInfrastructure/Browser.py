@@ -1,8 +1,10 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 from AutomationInfrastructure.WebElementExtensions import WebElementExtensions
+from Helpers.TypeValidator import TypeValidator
 
 
 class Browser(object):
@@ -13,6 +15,11 @@ class Browser(object):
         self.initialize_web_element_class()
 
     def wait_for_element(self, by, selector, description="", timeout=30):
+        TypeValidator.validate_type(by, str)
+        TypeValidator.validate_type(selector, str)
+        TypeValidator.validate_type(description, str)
+        TypeValidator.validate_type(timeout, int)
+
         element = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((by, selector)))
         element.by = by
         element.selector = selector
@@ -23,6 +30,7 @@ class Browser(object):
         self.driver.quit()
 
     def take_screenshot(self, description):
+        TypeValidator.validate_type(description, str)
         description = description.replace(" ", "")
         import os
         full_path = os.path.abspath('Screenshots/' + description + '.png')
@@ -32,6 +40,7 @@ class Browser(object):
         #     raise Exception(f'failed to save screenshot to {full_path}')
 
     def switch_to_iframe(self, iframe_id):
+        TypeValidator.validate_type(iframe_id, str)
         WebDriverWait(self.driver, 10).until(EC.frame_to_be_available_and_switch_to_it(iframe_id))
 
     def switch_back_to_main(self):

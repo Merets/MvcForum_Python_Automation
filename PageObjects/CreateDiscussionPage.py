@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from Helpers.Discussion import Discussion
 from Helpers.DropDownList import DropDownList
 from Helpers.HelperEnums import DiscussionCategory
+from Helpers.TypeValidator import TypeValidator
 
 
 class CreateDiscussionPage(object):
@@ -15,13 +16,11 @@ class CreateDiscussionPage(object):
                            DiscussionCategory.DesignPatterns: "Design Patterns"}
 
     def create_new_discussion(self, discussion):
-        if type(discussion) is not Discussion:
-            raise TypeError("Discussion should be valid before creation")
-
         self.__fill_discussion_form(discussion)
         self.__submit_discussion()
 
     def __fill_discussion_form(self, discussion):
+        TypeValidator.validate_type(discussion, Discussion)
         title_input = self.browser.wait_for_element(By.ID, "Name", "Title Input Element")
         title_input.send_keys(discussion.title)
 

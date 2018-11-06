@@ -1,5 +1,6 @@
 import random
 
+from Helpers.TypeValidator import TypeValidator
 from Helpers.User import User
 
 
@@ -9,6 +10,7 @@ class Generator(object):
 
     @classmethod
     def get_random_number(cls, amount_of_digits=6):
+        TypeValidator.validate_type(amount_of_digits, int)
         start_num = 10 ** (amount_of_digits - 1)
         end_num = (10 ** amount_of_digits) - 1
         number = random.randint(start_num, end_num)

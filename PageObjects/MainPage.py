@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from Helpers.Discussion import Discussion
+from Helpers.TypeValidator import TypeValidator
 from PageObjects.DiscussionPage import DiscussionPage
 
 
@@ -9,6 +10,7 @@ class MainPage(object):
         self.browser = browser
 
     def enter_to_discussion(self, discussion):
+        TypeValidator.validate_type(discussion, Discussion)
         discussion_rows_list = self.browser.driver.find_elements(By.CLASS_NAME, "topicrow")
         for row in discussion_rows_list:
             title_link = row.wait_for_child_element(By.CSS_SELECTOR, "h3 a")
@@ -17,8 +19,7 @@ class MainPage(object):
                 return DiscussionPage(self.browser)
 
     def is_discussion_present(self, discussion):
-        if not isinstance(discussion, Discussion):
-            raise TypeError("Discussion should be valid for search!")
+        TypeValidator.validate_type(discussion, Discussion)
 
         topic_rows = self.browser.driver.find_elements(By.CLASS_NAME, "topicrow")
         for topic in topic_rows:

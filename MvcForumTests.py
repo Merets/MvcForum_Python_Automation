@@ -9,6 +9,7 @@ from Helpers.Comment import Comment
 from Helpers.Discussion import Discussion
 from Helpers.Generator import Generator
 from Helpers.HelperEnums import DiscussionCategory
+from Helpers.TypeValidator import TypeValidator
 from MvcForumApp import MvcForumApp
 from PageObjects.DiscussionPage import DiscussionPage
 
@@ -51,8 +52,8 @@ class MvcForumTests(unittest.TestCase):
 
     # <editor-fold desc="TestUtilities">
     def __register_new_users(self, amount_of_users):
-        if not isinstance(amount_of_users, int) \
-                or not amount_of_users > 0:
+        TypeValidator.validate_type(amount_of_users, int)
+        if not amount_of_users > 0:
             raise ValueError("Amount of Users should be a number greater than 0")
 
         users_list = []
@@ -91,11 +92,7 @@ class MvcForumTests(unittest.TestCase):
         return comment
 
     def __is_comment_on_discussion_page(self, comment, discussion_page):
-        if not isinstance(comment, Comment):
-            raise TypeError("Comment should be valid!")
-        if not isinstance(discussion_page, DiscussionPage):
-            raise TypeError("Discussion Page should be valid!")
-
+        TypeValidator.validate_type(discussion_page, DiscussionPage)
         return discussion_page.is_comment_displayed(comment)
 
         # </editor-fold>

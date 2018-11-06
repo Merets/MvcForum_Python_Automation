@@ -1,11 +1,11 @@
 from Helpers.HelperEnums import DiscussionCategory
+from Helpers.TypeValidator import TypeValidator
 
 
 class Discussion(object):
     def __init__(self, title, category, tag, content):
+        TypeValidator.validate_type(category, DiscussionCategory)
         self.title = title
-        if type(category) is not DiscussionCategory:
-            raise TypeError("Category should be DiscussionCategory Enum Type")
         self.category = category
         self.tag = tag
         self.content = content

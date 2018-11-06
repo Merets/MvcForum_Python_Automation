@@ -3,6 +3,8 @@ import time
 from selenium.webdriver.common.by import By
 
 from Helpers.Comment import Comment
+from Helpers.TypeValidator import TypeValidator
+from Helpers.User import User
 
 
 class DiscussionPage(object):
@@ -18,8 +20,7 @@ class DiscussionPage(object):
 
     # <editor-fold desc="Comment area">
     def write_comment(self, comment):
-        if not isinstance(comment, Comment):
-            raise TypeError("Comment should be valid!")
+        TypeValidator.validate_type(comment, Comment)
         self.browser.switch_to_iframe("PostContent_ifr")
         comment_text_field = self.browser.wait_for_element(By.ID, "tinymce", "Comment Text Field")
         comment_text_field.move_to_element()
@@ -31,8 +32,7 @@ class DiscussionPage(object):
         add_comment_button.click()
 
     def __is_string_on_comments_page(self, string_to_search):
-        if type(string_to_search) is not str:
-            raise Exception("Search value should be a string!")
+        TypeValidator.validate_type(string_to_search, str)
         all_p_elements = self.browser.driver.find_elements(By.TAG_NAME, "p")
         for p in all_p_elements:
             if string_to_search in p.text:
@@ -80,6 +80,7 @@ class DiscussionPage(object):
                             vote_link.click()
 
     def __get_all_user_comments(self, user):
+        TypeValidator.validate_type(user, User)
         self.browser.wait_for_element(By.CLASS_NAME, "topicshow", "Main div of all posts")
         all_posts = self.browser.driver.find_elements(By.CLASS_NAME, "post")
         posts_from_user = []
@@ -92,14 +93,16 @@ class DiscussionPage(object):
 
     # </editor-fold>
     def is_comment_displayed(self, comment):
-        def get_content_from_comment(postcontent):
-            p_elements = postcontent.find_elements(By.TAG_NAME, "p")
+        def get_comments_by_content(content_to_search):
+            comment_elements = self.browser.driver.find_elements(By.CLASS_NAME, "postcontent")
+            for el in comment_elements:
+                if extract_content_from_comment(el) == content_to_search:
+                    yield el
+
+        def extract_content_from_comment(c_element):
+            p_elements = c_element.find_elements(By.TAG_NAME, "p")
             return p_elements[1].text
 
-        if not isinstance(comment, Comment):
-            raise TypeError("Comment should be valid!")
-
-        comments_found = [comment_element for comment_element
-                          in self.browser.driver.find_elements(By.CLASS_NAME, "postcontent")
-                          if get_content_from_comment(comment_element) == comment.comment_content]
+        TypeValidator.validate_type(comment, Comment)
+        comments_found = list(get_comments_by_content(comment.comment_content))
         return len(comments_found) == 1
